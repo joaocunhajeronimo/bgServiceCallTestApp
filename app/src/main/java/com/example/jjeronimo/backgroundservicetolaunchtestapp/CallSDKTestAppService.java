@@ -15,40 +15,83 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
 
-public class CallSDKTestAppService extends Service{
+public class CallSDKTestAppService extends Service {
 
 	private static final String TAG = "CallSDKTestAppService";
 	private Looper mServiceLooper;
 	private ServiceHandler mServiceHandler;
+	private static final int THRESHOLD = 100;
 
 	@Override
 	public IBinder onBind(Intent intent) {
 		return null;
 	}
 
+	public String getDeviceInfo() {
+		return  "SDK version: " +
+				android.os.Build.VERSION.SDK +
+				", Device: " +
+				android.os.Build.DEVICE +
+				", Model: " +
+				android.os.Build.MODEL +
+				", Product: " +
+				android.os.Build.PRODUCT;
+
+	}
+
 	// Handler that receives messages from the thread
 	private final class ServiceHandler extends Handler {
+
 		public ServiceHandler(Looper looper) {
 			super(looper);
 		}
+
 		@Override
 		public void handleMessage(Message msg) {
 			// Normally we would do some work here, like download a file.
 			// For our sample, we just sleep for 5 seconds.
 
-				synchronized (this) {
-					try {
-						while (true) {
-							wait(8000);
-							callSdkTestApp();
+			synchronized (this) {
+				try {
+					callSdkTestApp();
+					int startTestAppCount = 0;
+					while (true) {
+						wait(30000);
+						callSdkTestApp();
+						startTestAppCount++;
+						if (startTestAppCount % THRESHOLD == 0) {
+							sendExceptionByEmail(getDeviceInfo() + " has started the app " + startTestAppCount + " times");
+							Log.i("", "Email has been sent");
 						}
-					} catch (Exception e) {
 					}
+				} catch (Exception e) {
 				}
+			}
 			// Stop the service using the startId, so that we don't stop
 			// the service in the middle of handling another job
 			stopSelf(msg.arg1);
 		}
+	}
+
+	private void sendExceptionByEmail(String body) {
+
+		try {
+
+			Mail m = new Mail("delta.compadre@gmail.com", "shitonastick");
+
+			String[] toArr = {"joao.jeronimo@fyber.com", "theoklitos.christodoulou@fyber.com"};
+			m.setTo(toArr);
+			m.setFrom("fyber@fyber.com");
+			m.setSubject("[PRECRASH] App start");
+			m.setBody(body);
+			m.send();
+
+
+		} catch (Exception e) {
+			Log.e("MailApp", "Could not send email", e);
+			e.printStackTrace();
+		}
+
 	}
 
 	private void callSdkTestApp() {
@@ -56,7 +99,7 @@ public class CallSDKTestAppService extends Service{
 		Log.d(TAG, "callSdkTestApp");
 		Intent intent = new Intent("android.intent.category.LAUNCHER");
 //		intent.setClassName("com.your.package", "com.your.package.MainActivity");
-		intent.setClassName("com.sponsorpay.sdk.android.testapp", "com.sponsorpay.sdk.android.testapp.SponsorpayAndroidTestAppActivity");
+		intent.setClassName("com.fyber.precachingtest", "com.fyber.precachingtest.MainActivity");
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		startActivity(intent);
 	}

@@ -2,32 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/Users/jjeronimo/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jar="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/libs/mail.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="/Users/jjeronimo/dev/repos/BackgroundServiceToLaunchTestApp/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-05b726e35bf871bf802979cf598848880e7424ba.jar" />
+        sha1="428e267abff0d10802ccde86b915da2c20471160">
+        <dex dex="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/build/intermediates/pre-dexed/debug/mail-7594c4cfab116d02bc5e42ba4748dc42efa9afec.jar" />
     </item>
     <item
-        jar="/Users/jjeronimo/dev/repos/BackgroundServiceToLaunchTestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/Users/jjeronimo/dev/repos/BackgroundServiceToLaunchTestApp/app/build/intermediates/pre-dexed/debug/classes-9df792530ed62fa8cb110a1dcb392d9ffbd9d9c8.jar" />
-    </item>
-    <item
-        jar="/Users/jjeronimo/dev/repos/BackgroundServiceToLaunchTestApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/jjeronimo/dev/repos/BackgroundServiceToLaunchTestApp/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-a2d6705bfd205beb9319548cc3c1729598579733.jar" />
-    </item>
-    <item
-        jar="/Users/jjeronimo/dev/repos/BackgroundServiceToLaunchTestApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jar="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/jjeronimo/dev/repos/BackgroundServiceToLaunchTestApp/app/build/intermediates/pre-dexed/debug/classes-992c8cf55767cbbe4d17c82005d4853c0c70ef5b.jar" />
+        <dex dex="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/build/intermediates/pre-dexed/debug/classes-42ccb618a97edeec479538e6698da770865575e5.jar" />
+    </item>
+    <item
+        jar="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/build/intermediates/pre-dexed/debug/classes-247832bd0db53e51fc80bf6e546d6c26711ce0b3.jar" />
+    </item>
+    <item
+        jar="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/libs/additionnal.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
+        <dex dex="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/build/intermediates/pre-dexed/debug/additionnal-f5a99db6d601625f8dbe2ee0643b8516595a21e6.jar" />
+    </item>
+    <item
+        jar="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-d3d5b6178b16c99f5e12f842293e830e39bccf3e.jar" />
+    </item>
+    <item
+        jar="/Users/alexios.karapetsas/android-sdks/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-14392d9da271164fdd1529a16f6036be479cbdff.jar" />
+    </item>
+    <item
+        jar="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/libs/activation.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d1257cbff6faa44c1f325ae0d9413522d4644383">
+        <dex dex="/Users/alexios.karapetsas/Desktop/bgServiceCallTestApp/app/build/intermediates/pre-dexed/debug/activation-25901fc695ac83101dab7cc80bdad1619e4261a6.jar" />
     </item>
 
 </items>
